@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="login.css">
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Entrar</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Cadastrar-se</label>
+        <div class="login-form">
+            <form id="login-form" class="sign-in-htm" method="post" action="login.php">
+                <div class="group">
+                    <label for="user" class="label">Nome do usuário:</label>
+                    <input id="user" type="text" name="username" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Senha:</label>
+                    <input id="pass" type="password" name="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked>
+                    <label for="check"><span class="icon"></span> Lembrar usuário.</label>
+                </div>
+                <div class="group">
+                    <button type="submit" class="button">Entrar</button>
+                </div>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <a href="#forgot">Esqueceu a senha?</a>
+                </div>
+            </form>
+            <form id="signup-form" class="sign-up-htm" method="post" action="signup.php">
+                <div class="group">
+                    <label for="signup-user" class="label">Nome de usuário:</label>
+                    <input id="signup-user" type="text" name="username" class="input">
+                </div>
+                <div class="group">
+                    <label for="signup-pass" class="label">Senha</label>
+                    <input id="signup-pass" type="password" name="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="signup-repass" class="label">Repita a senha</label>
+                    <input id="signup-repass" type="password" name="confirm_password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <label for="signup-email" class="label">Endereço de e-mail</label>
+                    <input id="signup-email" type="text" name="email" class="input">
+                </div>
+                <div class="group">
+                    <button type="submit" class="button">Cadastrar-se</button>
+                </div>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <label for="tab-1">Já sou um membro.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

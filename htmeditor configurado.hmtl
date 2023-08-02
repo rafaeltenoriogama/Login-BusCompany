@@ -1,0 +1,21 @@
+<table border="1" style="border-collapse: collapse; width: 1039px; height: 20px;">
+    <tbody>
+    <tr style="height: 36px;">
+    <td style="height: 20px; width: 519px;" colspan="5" rowspan="3">
+    <p><strong>Nome: </strong>{Nome}</p>
+    <p><strong style="font-size: 12px;">Tipo de acidente: </strong><span style="font-size: 12px;">{Tipo}</span></p>
+    <p><strong>Carro: </strong>{Carro}</p>
+    <p><strong>Modelo do veiculo envolvido: </strong><span style="font-size: 12px;">{VeiculoTerceiro}</span></p>
+    <strong>Observacao</strong> {Observacao}</td>
+    <td style="height: 20px; width: 518.999px;" colspan="5" rowspan="3">
+    <p><strong>Nome: </strong>{Nome}</p>
+    <p><strong style="font-size: 12px;">Tipo de acidente: </strong><span style="font-size: 12px;">{Tipo}</span></p>
+    <p><strong>Carro: </strong>{Carro}</p>
+    <p><strong>Modelo do veiculo envolvido: </strong><span style="font-size: 12px;">{VeiculoTerceiro}</span></p>
+    <strong>Observacao</strong> {Observacao}</td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    </tbody>
+    </table>
+    <hr style="width: 900px;" />
