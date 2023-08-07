@@ -1,9 +1,9 @@
 <?php
 // Conexão com o banco de dados
-$servername = "IP do servidor/local ou nuvem";
-$username = "login root/administrador do banco";
-$password = "Senha do banco de dados";
-$dbname = "Nome do banco de dados";
+$servername = "127.0.0.1";
+$username = "root";
+$password = "senha";
+$dbname = "database";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verifique se a conexão foi bem-sucedida
@@ -16,14 +16,15 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Consulta SQL para verificar o usuário e a senha na tabela
-$sql = "SELECT * FROM Tabela_do_banco_de_dados WHERE login='$username' AND pswd='$password'";
+$sql = "SELECT * FROM z_sec_users WHERE login='$username' AND pswd='$password'";
 $result = $conn->query($sql);
+// Substitua z_sec_users por sua tabela no banco de dados. 
 
 // Verifica se o login foi bem-sucedido ou não
 if ($result->num_rows > 0) {
     // Login bem-sucedido, redirecionar para a página inicial ou exibir uma mensagem de sucesso
     echo "Login bem-sucedido!";
-    header("Location: http://endereço_da_pagina_inicial/index.php");
+    header("Location: http://localhost:8092/teste/index.php");
 
 } else {
     // Login falhou, redirecionar de volta ao formulário de login ou exibir uma mensagem de erro
