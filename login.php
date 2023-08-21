@@ -1,9 +1,9 @@
 <?php
 // Conexão com o banco de dados
 $servername = "127.0.0.1";
-$username = "makima";
-$password = "abc123";
-$dbname = "projeto";
+$username = "root";
+$password = "senha";
+$dbname = "database";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verifique se a conexão foi bem-sucedida
@@ -18,6 +18,7 @@ $password = $_POST['password'];
 // Consulta SQL para verificar o usuário e a senha na tabela
 $sql = "SELECT * FROM z_sec_users WHERE login='$username' AND pswd='$password'";
 $result = $conn->query($sql);
+// Substitua z_sec_users por sua tabela no banco de dados. 
 
 // Verifica se o login foi bem-sucedido ou não
 if ($result->num_rows > 0) {

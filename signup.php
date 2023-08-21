@@ -3,9 +3,9 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Conexão com o banco de dados (substitua os valores conforme sua configuração)
     $servername = "127.0.0.1";
-    $username = "makima";
-    $password = "abc123";
-    $dbname = "projeto";
+    $username = "root";
+    $password = "senha";
+    $dbname = "database";
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Verifica se a conexão foi estabelecida com sucesso
     if ($conn->connect_error) {
@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Erro ao cadastrar o usuário: " . $conn->error;
     }
+    // substitua z_sec_users por sua tabela.
 
     // Fecha a conexão com o banco de dados
     $conn->close();
