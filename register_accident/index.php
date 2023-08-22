@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Cadastro de novos sinistros</title>
     <style>
@@ -42,14 +43,15 @@
         }
 
         .form-group input[type="submit"] {
-    background-color: #34495e;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+            background-color: #34495e;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
     </style>
 
 </head>
+
 <body>
     <div class="container">
         <div class="form-header">
@@ -81,14 +83,15 @@
                 <label for="observacao">Observações:</label>
                 <input type="text" name="observacao" required>
             </div>
-            
+
             <div style="display: flex; justify-content: center;">
-            <div class="form-group">
-                 <input type="submit" value="   Finalizar registro   " style="border: 2px solid #000;">
-            </div>
+                <div class="form-group">
+                    <input type="submit" value="   Finalizar registro   " style="border: 2px solid #000;">
+                </div>
             </div>
 
         </form>
     </div>
 </body>
+
 </html>
