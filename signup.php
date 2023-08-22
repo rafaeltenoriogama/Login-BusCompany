@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("A senha e a confirmação de senha não são iguais.");
     }
 
-    // Insere o novo usuário na tabela 'z_sec_users'
-    $sql = "INSERT INTO z_sec_users (login, pswd, email) VALUES ('$username', '$password', '$email')";
+    // Insere o novo usuário na tabela 'users_table'
+    $sql = "INSERT INTO users_table (login, pswd, email) VALUES ('$username', '$password', '$email')";
     if ($conn->query($sql) === TRUE) {
         echo "Usuário cadastrado com sucesso.";
     } else {
         echo "Erro ao cadastrar o usuário: " . $conn->error;
     }
-    // substitua z_sec_users por sua tabela.
+    // substitua users_table por sua tabela, desde que, tenha as mesmas especificações.
 
     // Fecha a conexão com o banco de dados
     $conn->close();
