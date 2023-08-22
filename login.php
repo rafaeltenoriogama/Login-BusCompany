@@ -16,7 +16,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Consulta SQL para verificar o usuário e a senha na tabela
-$sql = "SELECT * FROM z_sec_users WHERE login='$username' AND pswd='$password'";
+$sql = "SELECT * FROM users_table WHERE login='$username' AND pswd='$password'";
 $result = $conn->query($sql);
 // Substitua z_sec_users por sua tabela no banco de dados. 
 
@@ -24,7 +24,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Login bem-sucedido, redirecionar para a página inicial ou exibir uma mensagem de sucesso
     echo "Login bem-sucedido!";
-    header("Location: http://localhost:8092/teste/index.php");
+    header("Location: http://localhost/register_accident/index.php");
+    // Nesse caso, direciona para a página de cadastro de acidentes.
 
 } else {
     // Login falhou, redirecionar de volta ao formulário de login ou exibir uma mensagem de erro
