@@ -6,9 +6,6 @@ $VeiculoTerceiro = $_POST['VeiculoTerceiro'];
 $carro = $_POST['carro'];
 $observacao = $_POST['observacao'];
 
-// Faça qualquer ação que você desejar com os dados recebidos
-// Por exemplo, armazenar os dados em uma tabela do banco de dados
-
 // Exemplo de conexão com o banco de dados
 $servername = "127.0.0.1";
 $username = "root";
@@ -23,13 +20,16 @@ if ($conn->connect_error) {
 
 // Inserir os dados na tabela
 $sql = "INSERT INTO db_projeto (nome, carro, tipo, observacao, VeiculoTerceiro) VALUES ('$nome', '$carro', '$tipo', '$observacao', '$VeiculoTerceiro')";
-// Substitua db_projeto pelo nome da sua tabela.
+// Substitua db_projeto pelo nome da sua tabela no banco de dados.
 
 if ($conn->query($sql) === TRUE) {
     echo "<script>alert('Novo registro cadastrado!'); window.location.href = 'index.php';</script>";
 } else {
     echo "Erro ao registrar! " . $conn->error;
 }
+// Se a consulta for bem-sucedida, ele exibe um alerta JavaScript "Novo registro cadastrado!"
+// E redireciona o usuário para a página inicial de cadastro.
+// Se a consulta falhar, ele exibe a mensagem "Erro ao registrar!"
 
 $conn->close();
 ?>
