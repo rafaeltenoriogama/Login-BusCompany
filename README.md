@@ -38,9 +38,9 @@ The `users_table` table stores user information for authentication and subscript
 | Column       | Data Type    | Description                      |
 |--------------|--------------|----------------------------------|
 | id           | INT (PK)     | User ID                          |
-| username     | VARCHAR(50)  | User's chosen username           |
-| email        | VARCHAR(100) | User's email address             |
-| password     | VARCHAR(255) | Hashed password for auth         |
+| username     | VARCHAR(30)  | User's chosen username           |
+| email        | VARCHAR(50)  | User's email address             |
+| password     | VARCHAR(20)  | Hashed password for auth         |
 
 ## Acknowledgments
 
