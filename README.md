@@ -1,30 +1,49 @@
-## Code Explanation
+# Login Page with Flip Animation
 
-The provided code is an HTML code for a login form. It includes two forms: 
-- One for signing in with a username and password
-- Another for signing up with a new username, password, and email.
+This project is a login page implementation that includes a flip animation effect based on CSS styles. The page allows users to log in or subscribe, and depending on the chosen action, the screen will flip to display the relevant form.
 
-Both forms have input fields and buttons for submission.
+This login page code provides a user-friendly interface for users to log in or register. The use of HTML, CSS, and PHP allows for seamless handling of user authentication and registration.
 
-Additionally, the code includes some HTML elements for styling and functionality, such as checkboxes and labels.
+## Features
+
+- Login and Subscribe Options: Users can choose between logging in with existing credentials or subscribing by providing new information.
+- Flip Animation: When a user clicks on the login or subscribe button, the screen will flip to reveal the corresponding form, providing an engaging visual effect.
+- User Authentication:
+  - **Login**: User-provided login credentials are sent to a PHP script for verification.
+  - **Subscription**: User-provided data is collected and stored in a MySQL/MariaDB database through a PHP script.
 
 ## Usage
 
-To use the provided code, follow these steps:
-1. Copy the HTML code and paste it into an HTML file (e.g., index.html).
-2. Save the file.
-3. Open the file in a web browser.
+1. Clone the repository to your local machine.
+2. Set up a web server (e.g., Apache, Nginx) and configure it to serve the project's files.
+3. Create a MySQL/MariaDB database and import the `table_users.sql` schema to create the necessary table.
+4. Update the database connection details in the PHP scripts to match your database configuration.
+5. Open the project in a web browser.
 
-## Requirements
+### File Structure
 
-To use the provided code, you need:
-- A web browser capable of running HTML and CSS.
-- A server-side script (e.g., login.php and signup.php) to handle the form submission.
+- `index.html`: The main HTML file containing the login page structure and flip animation triggers.
+- `login.php`: PHP script to verify user login credentials against the database.
+- `signup.php`: PHP script to handle user subscription data and store it in the database.
+- `users_table.sql`: SQL schema file to create the table for users in the database.
+- `login.css`: The file with CSS content for styling the login page and animation.
+- `background.css`: The file containing different ways to change the background image for the CSS style in the page.
 
-## Styling
+## Database Schema
 
-The code includes a reference to a CSS file named "login.css." Make sure to have this file available in the same directory as the HTML file.
+The `users_table` table stores user information for authentication and subscription.
 
-Markdown
+### `users_table`
 
+| Column       | Data Type    | Description                      |
+|--------------|--------------|----------------------------------|
+| id           | INT (PK)     | User ID                          |
+| username     | VARCHAR(50)  | User's chosen username           |
+| email        | VARCHAR(100) | User's email address             |
+| password     | VARCHAR(255) | Hashed password for auth         |
 
+## Acknowledgments
+
+- The flip animation is based on CSS transitions and transforms.
+- PHP is used for server-side scripting and database interaction.
+- MySQL/MariaDB is used to store user data.
