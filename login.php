@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Login bem-sucedido, redirecionar para a página inicial ou exibir uma mensagem de sucesso
     echo "Login bem-sucedido!";
-    header("Location: http://localhost/register_accident/index.php");
+    header("Location: http://localhost/Login-BusCompany/homepage.html");
     // Nesse caso, direciona para a página de cadastro de acidentes.
 
 } else {
